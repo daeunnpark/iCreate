@@ -3,6 +3,15 @@ import { AppBar, UserMenu, MenuItemLink, translate } from "react-admin";
 import SettingsIcon from "@material-ui/icons/Settings";
 
 const CustomUserMenu = translate(({ translate, ...props }) => (
+  /*
+  <UserMenu {...props}>
+    <MenuItemLink
+      to="/configuration"
+      primaryText={translate("pos.configuration")}
+      leftIcon={<SettingsIcon />}
+    />
+  </UserMenu>
+  */
   <UserMenu {...props}>
     <MenuItemLink
       to="/configuration"
