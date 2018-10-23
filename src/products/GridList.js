@@ -42,13 +42,15 @@ const getColsForWidth = width => {
 
 const GridList = ({ classes, ids, data, basePath, width }) => (
   <div className={classes.root}>
-    <MuiGridList
+    <MuiGridList // Multiple Gridlist
       cellHeight={180}
       cols={getColsForWidth(width)}
       className={classes.gridList}
     >
       {ids.map(id => (
         <GridListTile key={id}>
+          {" "}
+          // GridListTitle
           <img src={data[id].thumbnail} alt="" />
           <GridListTileBar
             className={classes.tileBar}
