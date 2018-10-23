@@ -8,7 +8,7 @@ import withWidth from "@material-ui/core/withWidth";
 import IconButton from "@material-ui/core/IconButton";
 import ContentCreate from "@material-ui/icons/Create";
 import { Link } from "react-router-dom";
-import { NumberField } from "react-admin";
+//import { NumberField } from "react-admin";
 import { linkToRecord } from "ra-core";
 
 const styles = {

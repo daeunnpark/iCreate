@@ -13,7 +13,7 @@ import Menu from "./Menu";
 import { Dashboard } from "./dashboard";
 import customRoutes from "./routes";
 import englishMessages from "./i18n/en";
-
+/*
 import {
   VisitorList,
   VisitorEdit,
@@ -21,6 +21,7 @@ import {
   VisitorIcon
 } from "./visitors";
 import { CommandList, CommandEdit, CommandIcon } from "./commands";
+*/
 import {
   ProductList,
   ProductCreate,
@@ -87,6 +88,7 @@ class App extends Component {
         locale="en"
         i18nProvider={i18nProvider}
       >
+        {/*
         <Resource
           name="customers"
           list={VisitorList}
@@ -101,6 +103,7 @@ class App extends Component {
           icon={CommandIcon}
           options={{ label: "Orders" }}
         />
+        */}
         <Resource
           name="products"
           list={ProductList}
