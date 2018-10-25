@@ -50,7 +50,7 @@ const GridList = ({ classes, ids, data, basePath, width }) => (
       {ids.map(id => (
         <GridListTile key={id}>
           {" "}
-          // GridListTitle
+          {/* GridListTitle */}
           <img src={data[id].thumbnail} alt="" />
           <GridListTileBar
             className={classes.tileBar}

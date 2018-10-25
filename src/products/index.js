@@ -108,11 +108,13 @@ export const ProductCreate = withStyles(createStyles)(
         </FormTab>
         <FormTab label="resources.products.tabs.details" path="details">
           <TextInput source="reference" validate={required()} />
+          {/*
           <NumberInput
             source="price"
             validate={required()}
             className={classes.price}
           />
+          */}
           <NumberInput
             source="width"
             validate={required()}
@@ -132,11 +134,13 @@ export const ProductCreate = withStyles(createStyles)(
           >
             <SelectInput source="name" />
           </ReferenceInput>
+          {/*
           <NumberInput
             source="stock"
             validate={required()}
             className={classes.stock}
           />
+          */}
         </FormTab>
         <FormTab label="resources.products.tabs.description" path="description">
           <RichTextInput source="description" addLabel={false} />

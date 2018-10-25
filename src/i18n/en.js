@@ -74,7 +74,7 @@ export default {
     products: {
       name: "Documents", //'Poster |||| Posters',
       fields: {
-        category_id: "Category",
+        category_id: "Facility",
         height_gte: "Min height",
         height_lte: "Max height",
         height: "Height",
@@ -96,7 +96,7 @@ export default {
       }
     },
     categories: {
-      name: "Category |||| Categories",
+      name: "Settings", //"Category |||| Categories", Facility Setting|||| Facilities
       fields: {
         products: "Products"
       }
