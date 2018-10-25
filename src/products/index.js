@@ -29,6 +29,7 @@ import StarRatingField from "../reviews/StarRatingField";
 import GridList from "./GridList";
 import Poster from "./Poster";
 
+import LinkToRelatedProducts from "../categories/LinkToRelatedProducts";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import { stringify } from "query-string";
@@ -40,28 +41,6 @@ const quickFilterStyles = {
     marginBottom: "0.7em"
   }
 };
-
-const LinkToRelatedProducts = ({ classes, record, translate }) => (
-  <Button
-    size="small"
-    color="primary"
-    component={Link}
-    to={{
-      pathname: "/products",
-      search: stringify({
-        page: 1,
-        perPage: 25,
-        sort: "id",
-        order: "DESC",
-        filter: JSON.stringify({ category_id: record.id })
-      })
-    }}
-    className={classes.link}
-  >
-    <ProductIcon className={classes.icon} />
-    {translate("resources.categories.fields.products")}
-  </Button>
-);
 
 const QuickFilter = translate(
   withStyles(quickFilterStyles)(({ classes, label, translate }) => (
@@ -76,6 +55,7 @@ export const ProductFilter = props => (
       source="category_id"
       reference="categories"
       sort={{ field: "id", order: "ASC" }}
+      alwaysOn
     >
       <SelectInput source="name" />
     </ReferenceInput>
@@ -83,11 +63,10 @@ export const ProductFilter = props => (
     <NumberInput source="width_lte" />
     <NumberInput source="height_gte" />
     <NumberInput source="height_lte" />
-    <QuickFilter
-      label="resources.products.fields.stock_lte"
-      source="stock_lte"
-      defaultValue={10}
-    />
+    {/*
+    <QuickFilter label="resources.products.fields.stock_lte" 
+    source="stock_lte" defaultValue={10} />
+    */}
   </Filter>
 );
 
