@@ -19,7 +19,7 @@ import {
   TextInput,
   required
 } from "react-admin";
-import Chip from "@material-ui/core/Chip";
+//import Chip from "@material-ui/core/Chip";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Icon from "@material-ui/icons/Collections";
 import RichTextInput from "ra-input-rich-text";
@@ -29,24 +29,22 @@ import StarRatingField from "../reviews/StarRatingField";
 import GridList from "./GridList";
 import Poster from "./Poster";
 
-import LinkToRelatedProducts from "../categories/LinkToRelatedProducts";
-import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
-import { stringify } from "query-string";
-
 export const ProductIcon = Icon;
 
+/*
 const quickFilterStyles = {
   root: {
     marginBottom: "0.7em"
   }
 };
-
+*/
+/*
 const QuickFilter = translate(
   withStyles(quickFilterStyles)(({ classes, label, translate }) => (
     <Chip className={classes.root} label={translate(label)} />
   ))
 );
+*/
 
 export const ProductFilter = props => (
   <Filter {...props}>
@@ -172,7 +170,9 @@ export const ProductEdit = withStyles(editStyles)(({ classes, ...props }) => (
       </FormTab>
       <FormTab label="resources.products.tabs.details" path="details">
         <TextInput source="reference" />
+        {/*
         <NumberInput source="price" className={classes.price} />
+        */}
         <NumberInput
           source="width"
           className={classes.width}
@@ -186,11 +186,14 @@ export const ProductEdit = withStyles(editStyles)(({ classes, ...props }) => (
         <ReferenceInput source="category_id" reference="categories">
           <SelectInput source="name" />
         </ReferenceInput>
+        {/*
         <NumberInput source="stock" className={classes.stock} />
+        */}
       </FormTab>
       <FormTab label="resources.products.tabs.description" path="description">
         <RichTextInput source="description" addLabel={false} />
       </FormTab>
+      {/*
       <FormTab label="resources.products.tabs.reviews" path="reviews">
         <ReferenceManyField
           reference="reviews"
@@ -207,6 +210,7 @@ export const ProductEdit = withStyles(editStyles)(({ classes, ...props }) => (
           </Datagrid>
         </ReferenceManyField>
       </FormTab>
+      */}
     </TabbedForm>
   </Edit>
 ));
