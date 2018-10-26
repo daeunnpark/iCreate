@@ -9,19 +9,20 @@ import {
   MenuItemLink,
   Responsive
 } from "react-admin";
-import { withRouter } from "react-router-dom";
 
+import { withRouter } from "react-router-dom";
+import { ProductIcon } from "./products";
+import { ReviewIcon } from "./reviews";
 //import { VisitorIcon } from "./visitors";
 //import { CommandIcon } from "./commands";
-import { ProductIcon } from "./products";
 //import { CategoryIcon } from "./categories";
-import { ReviewIcon } from "./reviews";
 
 const items = [
   //{ name: "customers", icon: <VisitorIcon /> },
   //{ name: "segments", icon: <LabelIcon /> },
   //{ name: "commands", icon: <CommandIcon /> },
   { name: "products", icon: <ProductIcon /> },
+  { name: "reservation", icon: <ReviewIcon /> },
   { name: "calendar", icon: <ReviewIcon /> },
   { name: "categories", icon: <SettingsIcon /> }
 

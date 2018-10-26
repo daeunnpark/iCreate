@@ -112,13 +112,20 @@ class App extends Component {
           icon={ProductIcon}
         />
         <Resource
-          name="calendar" //"reviews"
+          name="reservation" //"reservation"
           list={ReviewList}
           edit={ReviewEdit}
           icon={ReviewIcon}
         />
         <Resource
-          name="categories"
+          name="calendar" //"reviews"
+          list={ReviewList}
+          edit={ReviewEdit}
+          icon={ReviewIcon}
+        />
+
+        <Resource
+          name="categories" // Settings
           list={CategoryList}
           edit={CategoryEdit}
           icon={CategoryIcon}
