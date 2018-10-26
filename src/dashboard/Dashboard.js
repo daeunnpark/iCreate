@@ -20,6 +20,7 @@ const styles = {
 class Dashboard extends Component {
   state = {};
 
+  /*
   componentDidMount() {
     const aMonthAgo = new Date();
     aMonthAgo.setDate(aMonthAgo.getDate() - 30);
@@ -129,8 +130,9 @@ class Dashboard extends Component {
           });
       }
     );
+    //
   }
-
+*/
   render() {
     const {
       nbNewCustomers,
@@ -153,6 +155,7 @@ class Dashboard extends Component {
                 <div style={{ marginBottom: "2em" }}>
                   <Welcome />
                 </div>
+                {/*
                 <div style={styles.flex}>
                   <MonthlyRevenue value={revenue} />
                   <NbNewOrders value={nbNewOrders} />
@@ -163,6 +166,7 @@ class Dashboard extends Component {
                     customers={pendingOrdersCustomers}
                   />
                 </div>
+                */}
               </div>
             </div>
           }
@@ -171,6 +175,7 @@ class Dashboard extends Component {
               <div style={styles.singleCol}>
                 <Welcome />
               </div>
+              {/*
               <div style={styles.flex}>
                 <MonthlyRevenue value={revenue} />
                 <NbNewOrders value={nbNewOrders} />
@@ -180,27 +185,34 @@ class Dashboard extends Component {
                   orders={pendingOrders}
                   customers={pendingOrdersCustomers}
                 />
+                
               </div>
+              */}
             </div>
           }
           medium={
             <div style={styles.flex}>
               <div style={styles.leftCol}>
+                {/*
                 <div style={styles.flex}>
                   <MonthlyRevenue value={revenue} />
                   <NbNewOrders value={nbNewOrders} />
                 </div>
+                */}
                 <div style={styles.singleCol}>
                   <Welcome />
                 </div>
+                {/*
                 <div style={styles.singleCol}>
                   <PendingOrders
                     orders={pendingOrders}
                     customers={pendingOrdersCustomers}
                   />
                 </div>
+                */}
               </div>
               <div style={styles.rightCol}>
+                {/*
                 <div style={styles.flex}>
                   <PendingReviews
                     nb={nbPendingReviews}
@@ -209,6 +221,7 @@ class Dashboard extends Component {
                   />
                   <NewCustomers nb={nbNewCustomers} visitors={newCustomers} />
                 </div>
+              */}
               </div>
             </div>
           }

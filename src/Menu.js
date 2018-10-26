@@ -22,8 +22,9 @@ const items = [
   //{ name: "segments", icon: <LabelIcon /> },
   //{ name: "commands", icon: <CommandIcon /> },
   { name: "products", icon: <ProductIcon /> },
-  { name: "categories", icon: <SettingsIcon /> },
-  { name: "calendar", icon: <ReviewIcon /> }
+  { name: "calendar", icon: <ReviewIcon /> },
+  { name: "categories", icon: <SettingsIcon /> }
+
   //{ name: 'reviews', icon: <ReviewIcon /> },
 ];
 
