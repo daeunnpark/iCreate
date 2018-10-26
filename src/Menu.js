@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import compose from "recompose/compose";
 import SettingsIcon from "@material-ui/icons/Settings";
-import LabelIcon from "@material-ui/icons/Label";
+//import LabelIcon from "@material-ui/icons/Label";
 import {
   translate,
   DashboardMenuItem,
@@ -14,7 +14,7 @@ import { withRouter } from "react-router-dom";
 //import { VisitorIcon } from "./visitors";
 //import { CommandIcon } from "./commands";
 import { ProductIcon } from "./products";
-import { CategoryIcon } from "./categories";
+//import { CategoryIcon } from "./categories";
 import { ReviewIcon } from "./reviews";
 
 const items = [

@@ -1,13 +1,15 @@
 import React, { Component, Fragment } from "react";
-import { GET_LIST, GET_MANY, Responsive, Title } from "react-admin";
 
+import { Responsive, Title } from "react-admin"; // GET_LIST, GET_MANY,
 import Welcome from "./Welcome";
-import MonthlyRevenue from "./MonthlyRevenue";
+/*
 import NbNewOrders from "./NbNewOrders";
 import PendingOrders from "./PendingOrders";
 import PendingReviews from "./PendingReviews";
 import NewCustomers from "./NewCustomers";
 import dataProviderFactory from "../dataProvider";
+import MonthlyRevenue from "./MonthlyRevenue";
+*/
 
 const styles = {
   flex: { display: "flex" },
@@ -134,6 +136,7 @@ class Dashboard extends Component {
   }
 */
   render() {
+    /*
     const {
       nbNewCustomers,
       nbNewOrders,
@@ -145,6 +148,7 @@ class Dashboard extends Component {
       pendingReviewsCustomers,
       revenue
     } = this.state;
+    */
     return (
       <Fragment>
         <Title title="iCreate" />
