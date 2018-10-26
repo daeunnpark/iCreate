@@ -1,31 +1,36 @@
 import React from "react";
 import {
-  translate,
   Create,
-  Datagrid,
-  DateField,
   Edit,
-  EditButton,
   Filter,
   FormTab,
   List,
   NumberInput,
   ReferenceInput,
-  ReferenceManyField,
   SearchInput,
   SelectInput,
   TabbedForm,
-  TextField,
   TextInput,
   required
+  /*
+  translate,
+  Datagrid,
+  DateField,
+  EditButton,
+  ReferenceManyField,
+  TextField,
+  */
 } from "react-admin";
-//import Chip from "@material-ui/core/Chip";
+/*
+import Chip from "@material-ui/core/Chip";
+import CustomerReferenceField from "../visitors/CustomerReferenceField";
+import StarRatingField from "../reviews/StarRatingField";
+*/
+
 import withStyles from "@material-ui/core/styles/withStyles";
 import Icon from "@material-ui/icons/Collections";
 import RichTextInput from "ra-input-rich-text";
 
-import CustomerReferenceField from "../visitors/CustomerReferenceField";
-import StarRatingField from "../reviews/StarRatingField";
 import GridList from "./GridList";
 import Poster from "./Poster";
 
