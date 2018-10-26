@@ -98,7 +98,7 @@ export default {
     categories: {
       name: "Settings", //"Category |||| Categories", Facility Setting|||| Facilities
       fields: {
-        products: "Products"
+        products: "DOCUMENTS" //"Products"
       }
     },
     reviews: {
