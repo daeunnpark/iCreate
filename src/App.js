@@ -29,7 +29,7 @@ import {
   ProductIcon
 } from "./products";
 import { CategoryList, CategoryEdit, CategoryIcon } from "./categories";
-//import { ReviewList, ReviewEdit, ReviewIcon } from "./reviews";
+import { ReviewList, ReviewEdit, ReviewIcon } from "./reviews";
 
 import dataProviderFactory from "./dataProvider";
 import fakeServerFactory from "./fakeServer";
@@ -117,14 +117,14 @@ class App extends Component {
           edit={CategoryEdit}
           icon={CategoryIcon}
         />
-        {/*
-        <Resource
-          name="reviews"
-          list={ReviewList}
-          edit={ReviewEdit}
-          icon={ReviewIcon}
-        />
-        */}
+        {
+          <Resource
+            name="reviews" //"calendar"
+            list={ReviewList}
+            edit={ReviewEdit}
+            icon={ReviewIcon}
+          />
+        }
       </Admin>
     );
   }

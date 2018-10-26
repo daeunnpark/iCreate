@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import compose from "recompose/compose";
 import SettingsIcon from "@material-ui/icons/Settings";
-//import LabelIcon from "@material-ui/icons/Label";
+import LabelIcon from "@material-ui/icons/Label";
 import {
   translate,
   DashboardMenuItem,
@@ -15,15 +15,16 @@ import { withRouter } from "react-router-dom";
 //import { CommandIcon } from "./commands";
 import { ProductIcon } from "./products";
 import { CategoryIcon } from "./categories";
-//import { ReviewIcon } from './reviews';
+import { ReviewIcon } from "./reviews";
 
 const items = [
   //{ name: "customers", icon: <VisitorIcon /> },
   //{ name: "segments", icon: <LabelIcon /> },
   //{ name: "commands", icon: <CommandIcon /> },
   { name: "products", icon: <ProductIcon /> },
-  { name: "categories", icon: <CategoryIcon /> }
-  // { name: 'reviews', icon: <ReviewIcon /> },
+  { name: "categories", icon: <SettingsIcon /> },
+  { name: "calendar", icon: <ReviewIcon /> }
+  //{ name: 'reviews', icon: <ReviewIcon /> },
 ];
 
 const Menu = ({ onMenuClick, translate, logout }) => (
