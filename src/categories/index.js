@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Create,
   translate,
   Datagrid,
   Edit,
@@ -9,7 +10,10 @@ import {
   ReferenceManyField,
   SimpleForm,
   TextField,
-  TextInput
+  required,
+  TextInput,
+  FormTab,
+  TabbedForm
 } from "react-admin";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Icon from "@material-ui/icons/Bookmark";
@@ -33,6 +37,69 @@ export const CategoryList = withStyles(listStyles)(({ classes, ...props }) => (
     </Datagrid>
   </List>
 ));
+
+const createStyles = {
+  stock: { width: "5em" },
+  price: { width: "5em" },
+  width: { width: "5em" },
+  widthFormGroup: { display: "inline-block" },
+  height: { width: "5em" },
+  heightFormGroup: { display: "inline-block", marginLeft: 32 }
+};
+
+export const CategoryCreate = withStyles(createStyles)(
+  ({ classes, ...props }) => (
+    <Create {...props}>
+      <TabbedForm>
+        <FormTab label="New">
+          <TextInput
+            source="name"
+            options={{ fullWidth: true }}
+            validate={required()}
+          />
+        </FormTab>
+
+        {/*
+        <FormTab label="resources.products.tabs.details" path="details">
+          <TextInput source="reference" validate={required()} />
+          {/*
+          <NumberInput
+            source="price"
+            validate={required()}
+            className={classes.price}
+          />
+          
+        <NumberInput
+          source="width"
+          validate={required()}
+          className={classes.width}
+          formClassName={classes.widthFormGroup}
+        />
+        <NumberInput
+          source="height"
+          validate={required()}
+          className={classes.height}
+          formClassName={classes.heightFormGroup}
+        />
+        <ReferenceInput source="category_id" reference="categories" allowEmpty>
+          <SelectInput source="name" />
+        </ReferenceInput>
+        {/*
+          <NumberInput
+            source="stock"
+            validate={required()}
+            className={classes.stock}
+          />
+          
+        </FormTab>
+        <FormTab label="resources.products.tabs.description" path="description">
+          <RichTextInput source="description" addLabel={false} />
+        </FormTab>
+        */}
+      </TabbedForm>
+    </Create>
+  )
+);
 
 const CategoryTitle = translate(({ record, translate }) => (
   <span>

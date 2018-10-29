@@ -28,7 +28,14 @@ import {
   ProductEdit,
   ProductIcon
 } from "./products";
-import { CategoryList, CategoryEdit, CategoryIcon } from "./categories";
+
+import {
+  CategoryList,
+  CategoryCreate,
+  CategoryEdit,
+  CategoryIcon
+} from "./categories";
+
 import { ReviewList, ReviewEdit, ReviewIcon } from "./reviews";
 
 import dataProviderFactory from "./dataProvider";
@@ -101,32 +108,37 @@ class App extends Component {
           list={CommandList}
           edit={CommandEdit}
           icon={CommandIcon}
-          options={{ label: "Orders" }}
+          options={{ label: "Documents" }}
         />
         */}
         <Resource
           name="products"
-          list={ProductList}
+          list={
+            ProductList // Documents
+          }
           create={ProductCreate}
           edit={ProductEdit}
           icon={ProductIcon}
         />
         <Resource
-          name="reservation" //"reservation"
+          name="reservation"
+          list={ReviewList}
+          edit={ReviewEdit}
+          icon={ReviewIcon}
+          options={{ label: "Reservation" }}
+        />
+        <Resource
+          name="calendar"
           list={ReviewList}
           edit={ReviewEdit}
           icon={ReviewIcon}
         />
         <Resource
-          name="calendar" //"reviews"
-          list={ReviewList}
-          edit={ReviewEdit}
-          icon={ReviewIcon}
-        />
-
-        <Resource
-          name="categories" // Settings
-          list={CategoryList}
+          name="categories"
+          list={
+            CategoryList //Settings
+          }
+          create={CategoryCreate}
           edit={CategoryEdit}
           icon={CategoryIcon}
         />

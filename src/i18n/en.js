@@ -72,7 +72,7 @@ export default {
       }
     },
     products: {
-      name: "Documents", //'Poster |||| Posters',
+      name: "Documents", // "Poster |||| Posters"
       fields: {
         category_id: "Facility",
         height_gte: "Min height",
